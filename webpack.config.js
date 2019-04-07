@@ -5,11 +5,11 @@ module.exports = {
   entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, 'build'),
-    publicPath: '/',
+    publicPath: './',
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: "./public"
+    contentBase: './public'
   },
   module: {
     rules: [
@@ -20,11 +20,11 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'less-loader'
-        ]
+        use: ['style-loader', 'css-loader', 'less-loader']
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: ['file-loader']
       }
     ]
   },
