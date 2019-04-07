@@ -10,22 +10,23 @@ const StyledCheckboxWrapper = styled.div`
 const StyledCheckbox = styled.input`
   width: 1.5em;
   height: 1.5em;
-  background-color: white;
-  border-radius: 50%;
   vertical-align: middle;
-  border: 1px solid #ddd;
+  background-color: #ffffff;
+  border: 6px solid #ffffff;
+  border-radius: 50%;
   -webkit-appearance: none;
   outline: none;
   cursor: pointer;
   margin-right: 4px;
 
   &:checked {
-    background-color: gray;
+    border: 6px solid #139BE8;
+    background-color: #ffffff;
   }
 `;
 
 const StyledCheckboxLabel = styled.label`
-  color: white;
+  color: #0d0d0d;
 `;
 
 export class Checkbox extends React.Component {
