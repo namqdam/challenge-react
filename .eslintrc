@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "extends": "react",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "max-len": ["error", { "code": 80, "tabWidth": 2 }],
+    "react/prop-types": 0,
+    "react/sort-comp": 0,
+    "space-before-function-paren": 0
+  }
+}
