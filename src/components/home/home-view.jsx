@@ -8,6 +8,8 @@ import { AppContext } from 'context/app.context';
 import { HomeService } from 'service/home.service';
 
 class _HomeView extends React.Component {
+  timeout;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -31,6 +33,10 @@ class _HomeView extends React.Component {
     HomeService.listPayments().then(res => {
       updatePayments(res);
     });
+  }
+
+  componentWillUnmount() {
+    this.timeout && clearTimeout(this.timeout);
   }
 
   render() {
@@ -72,7 +78,8 @@ class _HomeView extends React.Component {
       updatePayments([...payments, res]);
 
       this.setState({ lastPayment: amount }, () => {
-        setTimeout(() => {
+        this.timeout && clearTimeout(this.timeout);
+        this.timeout = setTimeout(() => {
           this.setState({ lastPayment: 0 });
         }, 3000);
       });
