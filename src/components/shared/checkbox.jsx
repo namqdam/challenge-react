@@ -20,7 +20,7 @@ const StyledCheckbox = styled.input`
   margin-right: 4px;
 
   &:checked {
-    border: 6px solid #139BE8;
+    border: 6px solid #139be8;
     background-color: #ffffff;
   }
 `;
@@ -29,20 +29,17 @@ const StyledCheckboxLabel = styled.label`
   color: #0d0d0d;
 `;
 
-export class Checkbox extends React.Component {
-  render() {
-    const { checked, id, name, onChange } = this.props;
-    return (
-      <StyledCheckboxWrapper>
-        <StyledCheckbox
-          type="checkbox"
-          checked={checked}
-          id={id}
-          name={name}
-          onChange={onChange}
-        />
-        <StyledCheckboxLabel htmlFor={id}>{name}</StyledCheckboxLabel>
-      </StyledCheckboxWrapper>
-    );
-  }
+export function Checkbox({ checked, id, name, onChange }) {
+  return (
+    <StyledCheckboxWrapper>
+      <StyledCheckbox
+        type="checkbox"
+        checked={checked}
+        id={id}
+        name={name}
+        onChange={onChange}
+      />
+      <StyledCheckboxLabel htmlFor={id}>{name}</StyledCheckboxLabel>
+    </StyledCheckboxWrapper>
+  );
 }

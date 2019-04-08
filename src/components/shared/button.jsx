@@ -8,8 +8,10 @@ export const BorderButton = styled.button`
   font-weight: 600;
   color: #139be8;
   border-color: #139be8;
+  background-color: transparent;
   border-radius: 6px;
   border-width: 2px;
+  -webkit-appearance: none;
 
   &:hover {
     cursor: pointer;
@@ -22,6 +24,7 @@ export const ClearButton = styled.button`
   background-color: transparent;
   border-radius: 6px;
   border-width: 0;
+  -webkit-appearance: none;
 
   &:hover {
     cursor: pointer;

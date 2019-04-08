@@ -68,13 +68,10 @@ const StyledSnackBar = styled.div`
   }
 `;
 
-export class SnackBar extends React.Component {
-  render() {
-    const { visible } = this.props;
-    return (
-      <StyledSnackBar className={visible ? 'show' : ''}>
-        {this.props.children}
-      </StyledSnackBar>
-    );
-  }
+export function SnackBar({ children, visible }) {
+  return (
+    <StyledSnackBar className={visible ? 'show' : ''}>
+      {children}
+    </StyledSnackBar>
+  );
 }

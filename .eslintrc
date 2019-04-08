@@ -1,6 +1,7 @@
 {
   "parser": "babel-eslint",
   "extends": "react",
+  "plugins": ["react-hooks"],
   "env": {
     "browser": true,
     "node": true
@@ -15,6 +16,8 @@
     "max-len": ["error", { "code": 80, "tabWidth": 2 }],
     "react/prop-types": 0,
     "react/sort-comp": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "space-before-function-paren": 0
   }
 }
