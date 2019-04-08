@@ -8,7 +8,8 @@ const CardWrapper = styled.div`
   display: inline-block;
   border: 1px solid #ccc;
   margin: 0em 1em 1em 1em;
-
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  
   .content {
     display: flex;
     position: relative;
