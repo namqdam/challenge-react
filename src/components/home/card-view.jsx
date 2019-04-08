@@ -62,7 +62,7 @@ export class CardView extends React.Component {
     return (
       <CardWrapper>
         <div className="content">
-          <CardImage src={`/images/${charity.image}`} />
+          <CardImage src={`./images/${charity.image}`} />
           <CardAccessory>
             <Header4>{charity.name}</Header4>
             <BorderButton onClick={this.switchOverlay}>Donate</BorderButton>
